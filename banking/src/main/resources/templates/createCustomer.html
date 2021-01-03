@@ -1,0 +1,21 @@
+<form th:action="@{/addCustomer}" th:object="${customer}" method = "post">
+
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" th:field="*{name}" /></td>
+        <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name
+         Error</td>
+       </tr>
+       <tr>
+        <td>PAN:</td>
+        <td><input type="text" th:field="*{pan}" /></td>
+        <td th:if="${#fields.hasErrors('pan')}" th:errors="*{pan}">PAN
+         Error</td>
+       </tr>
+       <tr>
+        <td><button type="submit">Submit</button></td>
+       </tr>
+      </table>
+
+</form>
+

@@ -1,0 +1,21 @@
+
+<p> List of transactions for account with ID <span th:text="${customer.name}" /> </p>
+<table>
+
+    <thead>
+        <tr>
+            <td> Transaction time: </td>
+            <td> Transaction type: </td>
+            <td> Transaction amount </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="transaction: ${transactions}">
+            <td th:text="${transaction.transactionTime}" />
+            <td th:text="${transaction.isDeposit}" />
+            <td th:text="${transaction.transactionAmount}" />
+        </tr>
+    </tbody>
+    
+</table>
