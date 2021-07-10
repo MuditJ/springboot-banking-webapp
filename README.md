@@ -1,2 +1,2 @@
 # springboot-banking-webapp
-Banking web application made using Springboot
+A simple banking web application made using Springboot, H2, and Thymeleaf. 
