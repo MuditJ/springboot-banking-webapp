@@ -1,0 +1,18 @@
+<p> Make a new withdrawal from your account </p>
+
+<p> Current account balance is: <span th:text="${account.balance}" /></p>
+
+<form th:action="@{/customers/{id}/accounts/{accId}/transactions/withdrawal(id=${id},accId=${account.id})}" th:object="${transaction}" method = "post">
+
+    <tr>
+        <td>Enter amount to deposit:</td>
+        <td><input type="text" th:field="*{transactionAmount}" /></td>
+        <td th:if="${#fields.hasErrors('transactionAmount')}" th:errors="*{transactionAmount">Transaction
+         Error</td>
+       </tr>
+       <tr>
+        <td><button type="submit">Submit</button></td>
+       </tr>
+      </table>
+
+</form>

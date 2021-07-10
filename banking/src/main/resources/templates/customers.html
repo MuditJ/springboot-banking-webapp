@@ -1,0 +1,17 @@
+<p> A list of all currently registered customers with the bank: </p>
+<table>
+    <thead>
+        <tr>
+            <td> Customer Name </td>
+            <td> Customer PAN </td>
+            <td> Customer ID </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="customer: ${customers}">
+            <td th:text="${customer.name}" />
+            <td th:text="${customer.pan}" />
+            <td th:text="${customer.id}" />
+        </tr>
+    </tbody>
+</table>

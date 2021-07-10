@@ -1,0 +1,14 @@
+<form th:action="@{/customers/{id}/accounts/new(id=${id})}" th:object="${account}" method = "post">
+
+    <tr>
+        <td>Initial balance:</td>
+        <td><input type="text" th:field="*{balance}" /></td>
+        <td th:if="${#fields.hasErrors('balance')}" th:errors="*{balance}">Balance
+         Error</td>
+       </tr>
+       <tr>
+        <td><button type="submit">Submit</button></td>
+       </tr>
+      </table>
+
+</form>

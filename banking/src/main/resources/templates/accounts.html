@@ -1,0 +1,21 @@
+
+<p> List of accounts for customer <span th:text="${customer.name}" /> </p>
+<table>
+
+    <thead>
+        <tr>
+            <td> Current balance: </td>
+            <td> Account created on: </td>
+            <td> Account ID </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="account: ${accounts}">
+            <td th:text="${account.balance}" />
+            <td th:text="${account.createdOn}" />
+            <td th:text="${account.id}" />
+        </tr>
+    </tbody>
+    
+</table>
